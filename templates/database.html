@@ -1,0 +1,55 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Database</title>
+	<style>
+	h1{
+		    margin-inline-start: 20%;
+		    font-size:400%;
+		}
+	
+	button{
+		 margin-inline-start: 48%;
+		 height: 45px;
+		 width: 80px;
+		 font-size:25px;
+		 border:solid black 2px;
+		 border-radius:10px;
+		background:rgba(0,0,0,0);
+		}
+		label.qwe{
+			font-size: 25px;
+			margin-top:50px	;
+			margin-inline-start: 40%;	
+				color:white;
+			}
+	body{
+		background-image:url('../static/balloon.jpg');
+		background-repeat:no-repeat;
+		background-attachment:fixed;
+		background-size:cover;
+		}
+	</style>
+</head>
+<body>
+	<a href="/"><h1>Welcome to Daily Dairy</h1></a><br><br>
+	<table>
+	<thead>
+	<th>Id</th>
+	<th>Name</th>
+	<th>Password</th>
+	<th>Text</th>
+	</thead>
+	{% for data in profiles %}
+	<tbody>
+	<td>{{data.id}}</td>
+	<td>{{data.username}}</td>
+	<td>{{data.password}}</td>
+	<td>{{data.para}}</td>
+	</tbody>
+	{% endfor %}
+	</table>
+</body>
+</html>
+

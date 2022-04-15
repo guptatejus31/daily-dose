@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>{{user.username}}'s-Daily Diary</title>
+	<style>
+	h1{
+		    margin-inline-start: 20%;
+		    font-size:400%;
+		}
+	button{
+		 margin-inline-start: 90%;
+		 height: 40px;
+		 width: 75px;
+		 font-size:18px;
+		 border:solid black 2px;
+		background:lightblue;
+		}
+	input.xyz{
+		height: 0px;
+		width: 0px;
+		font-size:0px;
+		}
+		
+	input.abc{
+		margin:15px;
+		width:950px;
+		height:300px;
+		font-size:23px;
+		background:rgba(255,255,255,0.4)
+		}
+	body{
+		background-image:url('../static/balloon.jpg');
+		background-repeat:no-repeat;
+		background-attachment:fixed;
+		background-size:cover;
+		}
+	</style>
+</head>
+<body>
+	<h1>{{user.username|capitalize}}'s Daily Dairy</h1>
+	<br>
+	<form action="/save" method="POST">
+		
+		<input class="xyz" type="text" name="username" placeholder="Username" value = "{{user.username}}" >
+
+		
+		<input class="abc" type="text" name="para" value="{{user.para}}">
+		<br><br>
+		<button type="submit">save</button>
+	</form>
+</body>
+</html>

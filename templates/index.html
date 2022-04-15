@@ -1,7 +1,79 @@
-{% extends "base.html" %}
-{% block title %}
-{{title|title}}
-{% endblock %}
-{% block body %}
-tejus
-{% endblock %}
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Daily Dairy</title>
+	<style>
+	h1{
+		    margin-inline-start: 20%;
+		    font-size:400%;
+		}
+	div{
+		    margin-inline-start: 25%;
+		}
+		
+	input{
+		height:35px;
+		margin: 15px;
+		font-size:30px;
+		background:transparent;
+		border:solid black 2px;
+		 border-radius:10px;
+		
+		}
+	label{
+		height:35px;
+		font-size:30px;
+		
+		}
+	label.rty{
+		height:35px;
+		font-size:30px;
+		padding:2.5%;
+		}
+	button{
+		 margin-inline-start: 48%;
+		 height: 45px;
+		 width: 80px;
+		 font-size:25px;
+		 border:solid black 2px;
+		 border-radius:10px;
+		background:rgba(0,0,0,0);
+		}
+		label.qwe{
+			font-size: 25px;
+			margin-top:50px	;
+			margin-inline-start: 40%;	
+				color:white;
+			}
+	body{
+		background-image:url('../static/balloon.jpg');
+		background-repeat:no-repeat;
+		background-attachment:fixed;
+		background-size:cover;
+		}
+	</style>
+</head>
+<body>
+	<h1>Welcome to Daily Dairy</h1><br><br>
+	<form action="/login" method="POST">
+		<div>
+		<label class="rty">                                   Name                        </label>
+		<input type="text" name="username" placeholder="  Name">
+		<br>
+		<br>
+		<br>
+		<label>Password      </label>
+		<input type="password" name= "password" placeholder="  Password">
+		<input type="checkbox" name= "show">
+		<br>
+		<br>
+		</div>
+		<br><br>
+		<button type="submit">Login</button><br>
+		
+	</form>
+	<br><br><br><br><br><br><br>
+	<label class="qwe">Created by Tejus Gupta</label>
+</body>
+</html>
+
